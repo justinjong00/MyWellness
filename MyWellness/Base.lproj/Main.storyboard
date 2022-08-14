@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LogInVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="LogInVC" id="BYZ-38-t0r" customClass="LogInViewController" customModule="MyWellness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvi-Gk-Nos">
+                                <rect key="frame" x="195" y="343" width="110" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log In"/>
+                                <connections>
+                                    <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D5g-P6-BKI"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQi-5u-Yym">
+                                <rect key="frame" x="51" y="230" width="254" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUk-mo-yAM">
+                                <rect key="frame" x="51" y="272" width="254" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyb-EU-ale">
+                                <rect key="frame" x="51" y="345" width="110" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sJg-Pi-9ba"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MyWellness" id="c1E-X8-w69"/>
+                    <connections>
+                        <outlet property="emailField" destination="sQi-5u-Yym" id="zrO-BJ-qf8"/>
+                        <outlet property="passwordField" destination="LUk-mo-yAM" id="Zm0-wJ-8rh"/>
+                        <segue destination="Q0U-xd-vDb" kind="showDetail" identifier="toMainMenu" id="Y86-wx-N2e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="520" y="-151.4218009478673"/>
+        </scene>
+        <!--MainMenuVC-->
+        <scene sceneID="qHV-Qo-mj9">
+            <objects>
+                <viewController storyboardIdentifier="mainMenu" title="MainMenuVC" id="Q0U-xd-vDb" customClass="MainMenuViewController" customModule="MyWellness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d7F-Qf-gj4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6X8-lw-vbb">
+                                <rect key="frame" x="0.0" y="711" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WMQ-Zt-Hdr"/>
+                                    <barButtonItem title="Log Out" id="4d1-9i-nKw">
+                                        <connections>
+                                            <action selector="logOut:" destination="Q0U-xd-vDb" id="7oB-xO-Iom"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="toLogIn" id="vxI-4u-eI2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LN0-zK-G1j"/>
+                                    <barButtonItem title="Archive" id="sWs-41-jYs">
+                                        <connections>
+                                            <action selector="goToArchive:" destination="Q0U-xd-vDb" id="XAr-Qk-kHj"/>
+                                            <segue destination="L2G-zi-JT0" kind="presentation" identifier="toArchive" id="Dds-7Y-NZ6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CIQ-9g-7U9"/>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krr-eX-1IS">
+                                <rect key="frame" x="224.33333333333334" y="294" width="65.666666666666657" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Habits"/>
+                                <connections>
+                                    <action selector="goToHabits:" destination="Q0U-xd-vDb" eventType="touchUpInside" id="edq-dO-aY7"/>
+                                    <segue destination="KcX-7Z-n0I" kind="show" identifier="toHabits" id="WOY-zx-ukV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw3-xk-phI">
+                                <rect key="frame" x="100" y="294" width="61" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Mood"/>
+                                <connections>
+                                    <action selector="goToMood:" destination="Q0U-xd-vDb" eventType="touchUpInside" id="26y-8K-5sz"/>
+                                    <segue destination="DWb-A2-kst" kind="show" identifier="toMood" id="aLs-k2-us9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHH-2M-Wjq">
+                                <rect key="frame" x="59" y="143" width="272" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j3O-7B-cMh"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Iw3-xk-phI" firstAttribute="top" secondItem="jHH-2M-Wjq" secondAttribute="bottom" constant="120" id="0BF-4k-WkV"/>
+                            <constraint firstItem="krr-eX-1IS" firstAttribute="top" secondItem="jHH-2M-Wjq" secondAttribute="bottom" constant="120" id="DZj-a5-Otz"/>
+                            <constraint firstItem="jHH-2M-Wjq" firstAttribute="leading" secondItem="j3O-7B-cMh" secondAttribute="leading" constant="89" id="Sqy-1S-KrH"/>
+                            <constraint firstItem="Iw3-xk-phI" firstAttribute="leading" secondItem="j3O-7B-cMh" secondAttribute="leading" constant="100" id="ZFn-X5-TQs"/>
+                            <constraint firstItem="j3O-7B-cMh" firstAttribute="trailing" secondItem="jHH-2M-Wjq" secondAttribute="trailing" constant="89" id="bR2-Wr-OJ8"/>
+                            <constraint firstItem="j3O-7B-cMh" firstAttribute="trailing" secondItem="krr-eX-1IS" secondAttribute="trailing" constant="100" id="iga-Sz-atj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vM3-Ud-Bnk"/>
+                    <connections>
+                        <outlet property="dateText" destination="jHH-2M-Wjq" id="uhD-NX-dP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5od-og-Ex0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490.7692307692307" y="-107.34597156398104"/>
+        </scene>
+        <!--HabitsVC-->
+        <scene sceneID="yZH-qd-oLF">
+            <objects>
+                <viewController title="HabitsVC" id="KcX-7Z-n0I" customClass="HabitsViewController" customModule="MyWellness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eyr-uz-fSC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCb-tV-KLC">
+                                <rect key="frame" x="67" y="189" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="sleep" imagePlacement="top" title="Sleep"/>
+                                <connections>
+                                    <action selector="sleepHabit:" destination="KcX-7Z-n0I" eventType="touchUpInside" id="5bD-2B-WGs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAp-od-EFS">
+                                <rect key="frame" x="222" y="189" width="98" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="meditation" imagePlacement="top" title="Meditation"/>
+                                <connections>
+                                    <action selector="meditationHabit:" destination="KcX-7Z-n0I" eventType="touchUpInside" id="XHN-VP-LBb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLr-ra-id5">
+                                <rect key="frame" x="53" y="323" width="102" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="nutrition" imagePlacement="top" title="Nutrition"/>
+                                <connections>
+                                    <action selector="nutritionHabit:" destination="KcX-7Z-n0I" eventType="touchUpInside" id="Apy-EX-kFW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIL-D7-HEQ">
+                                <rect key="frame" x="67" y="462" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cardio" imagePlacement="top" title="Cardio"/>
+                                <connections>
+                                    <action selector="cardioHabit:" destination="KcX-7Z-n0I" eventType="touchUpInside" id="Ro9-bL-k6Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cr7-cA-1N5">
+                                <rect key="frame" x="245" y="462" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="misc" imagePlacement="top" title="Misc." imagePadding="0.0"/>
+                                <connections>
+                                    <action selector="miscHabit:" destination="KcX-7Z-n0I" eventType="touchUpInside" id="WMH-IS-6rp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCp-YD-4PZ">
+                                <rect key="frame" x="233" y="323" width="98" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="workout" imagePlacement="top" title="Exercise"/>
+                                <connections>
+                                    <action selector="exerciseHabit:" destination="KcX-7Z-n0I" eventType="touchUpInside" id="TEV-b6-ohX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usr-Im-U4d">
+                                <rect key="frame" x="158" y="582" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveHabit:" destination="KcX-7Z-n0I" eventType="touchUpInside" id="lby-SH-pHj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E9r-Mn-RDy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dcY-FV-K2e"/>
+                    <connections>
+                        <outlet property="cardioButton" destination="xIL-D7-HEQ" id="wwF-do-QR2"/>
+                        <outlet property="exerciseButton" destination="QCp-YD-4PZ" id="uzX-ou-3ay"/>
+                        <outlet property="meditationButton" destination="ZAp-od-EFS" id="cXP-es-oqJ"/>
+                        <outlet property="miscButton" destination="cr7-cA-1N5" id="boU-xD-ykx"/>
+                        <outlet property="nutritionButton" destination="mLr-ra-id5" id="55g-Cu-5Xg"/>
+                        <outlet property="sleepButton" destination="dCb-tV-KLC" id="ye2-an-SWx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bt-Ey-Bsw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2256.9230769230767" y="-609.24170616113736"/>
+        </scene>
+        <!--Archive View Controller-->
+        <scene sceneID="3DB-6K-65y">
+            <objects>
+                <viewController id="L2G-zi-JT0" customClass="ArchiveViewController" customModule="MyWellness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fkn-S5-Zkl">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1XB-6s-x1z">
+                                <rect key="frame" x="16" y="64" width="358" height="716"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArchiveCell" rowHeight="168" id="EV8-S7-h0T" customClass="ArchiveCell" customModule="MyWellness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="358" height="168"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EV8-S7-h0T" id="YyR-0r-8Gm">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="168"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happiness Level: -1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Um8-PJ-nmV">
+                                                    <rect key="frame" x="0.0" y="46" width="184" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axw-lX-lUl">
+                                                    <rect key="frame" x="0.0" y="82" width="63" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Habits: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUc-cI-iUA">
+                                                    <rect key="frame" x="0.0" y="122" width="70" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="y0T-uw-c3G">
+                                                    <rect key="frame" x="71" y="84" width="30" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sleep" translatesAutoresizingMaskIntoConstraints="NO" id="Zfx-Ge-L9O">
+                                                    <rect key="frame" x="78" y="122" width="30" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardio" translatesAutoresizingMaskIntoConstraints="NO" id="j1b-Sj-teJ">
+                                                    <rect key="frame" x="116" y="121" width="30" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meditation" translatesAutoresizingMaskIntoConstraints="NO" id="vwB-NG-XKt">
+                                                    <rect key="frame" x="154" y="122" width="30" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nutrition" translatesAutoresizingMaskIntoConstraints="NO" id="zdw-bi-Tsg">
+                                                    <rect key="frame" x="192" y="122" width="30" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="workout" translatesAutoresizingMaskIntoConstraints="NO" id="rOI-G5-cbi">
+                                                    <rect key="frame" x="230" y="122" width="30" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="misc" translatesAutoresizingMaskIntoConstraints="NO" id="k5F-6y-xCd">
+                                                    <rect key="frame" x="276" y="121" width="30" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aK7-1U-4ca">
+                                                    <rect key="frame" x="0.0" y="4" width="332" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardio" destination="j1b-Sj-teJ" id="Or3-9u-dsT"/>
+                                            <outlet property="date" destination="aK7-1U-4ca" id="pM3-o8-YAO"/>
+                                            <outlet property="exercise" destination="rOI-G5-cbi" id="SFK-U0-9df"/>
+                                            <outlet property="happinessLevel" destination="Um8-PJ-nmV" id="sgG-Hf-0NA"/>
+                                            <outlet property="meditation" destination="vwB-NG-XKt" id="dgg-HV-Ak2"/>
+                                            <outlet property="misc" destination="k5F-6y-xCd" id="05L-gw-lIQ"/>
+                                            <outlet property="mood" destination="y0T-uw-c3G" id="sNf-Np-qtf"/>
+                                            <outlet property="nutrition" destination="zdw-bi-Tsg" id="BIp-CY-IzN"/>
+                                            <outlet property="sleep" destination="Zfx-Ge-L9O" id="pvY-bx-UPd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VuR-ie-rSa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="1XB-6s-x1z" id="kzx-Oz-t3z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEf-w1-RCI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3655.3846153846152" y="-125.11848341232226"/>
+        </scene>
+        <!--MoodVC-->
+        <scene sceneID="Mce-Cc-xBe">
+            <objects>
+                <viewController title="MoodVC" id="DWb-A2-kst" customClass="MoodViewController" customModule="MyWellness" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tI2-pW-Y3K">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJn-rH-uPS">
+                                <rect key="frame" x="158" y="478" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveMood:" destination="DWb-A2-kst" eventType="touchUpInside" id="xmV-TF-6rN"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" minimumValueImage="0.circle" catalog="system" maximumValueImage="10.square.fill" translatesAutoresizingMaskIntoConstraints="NO" id="BzP-wO-2vm">
+                                <rect key="frame" x="136" y="269" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="happinessLevel:" destination="DWb-A2-kst" eventType="valueChanged" id="wr6-nR-brl"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happiness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqO-mt-Arr">
+                                <rect key="frame" x="91" y="183" width="208" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5K-8L-3ea">
+                                <rect key="frame" x="43" y="378" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Bad"/>
+                                <connections>
+                                    <action selector="badMood:" destination="DWb-A2-kst" eventType="touchUpInside" id="VO5-xY-d8R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbX-VZ-Uta">
+                                <rect key="frame" x="158" y="378" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Okay"/>
+                                <connections>
+                                    <action selector="okayMood:" destination="DWb-A2-kst" eventType="touchUpInside" id="MMr-lw-vOF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO4-K7-d5p">
+                                <rect key="frame" x="280" y="378" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Good"/>
+                                <connections>
+                                    <action selector="goodMood:" destination="DWb-A2-kst" eventType="touchUpInside" id="akF-lJ-LMb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJu-X5-J0r">
+                                <rect key="frame" x="158" y="324" width="75" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S9b-Rz-eBZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OuG-N6-T1q"/>
+                    <connections>
+                        <outlet property="badOutlet" destination="W5K-8L-3ea" id="zII-OV-xJ2"/>
+                        <outlet property="goodOutlet" destination="mO4-K7-d5p" id="T7O-wi-X0L"/>
+                        <outlet property="happinessLabel" destination="AJu-X5-J0r" id="K0F-vK-TGS"/>
+                        <outlet property="happinessOutlet" destination="BzP-wO-2vm" id="twn-iF-ER7"/>
+                        <outlet property="okayOutlet" destination="wbX-VZ-Uta" id="MI8-Gk-TDe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k3N-0e-8ZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2293.8461538461538" y="274.4075829383886"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0.circle" catalog="system" width="128" height="121"/>
+        <image name="10.square.fill" catalog="system" width="128" height="114"/>
+        <image name="cardio" width="100" height="100"/>
+        <image name="happy" width="100" height="90"/>
+        <image name="meditation" width="100" height="100"/>
+        <image name="misc" width="100" height="100"/>
+        <image name="nutrition" width="100" height="100"/>
+        <image name="sleep" width="100" height="100"/>
+        <image name="workout" width="100" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
